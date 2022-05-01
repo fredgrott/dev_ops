@@ -26,11 +26,16 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
   # my modified settings for language and strong-mode and errors
+  # we got more language checks in Dart 2.16 so that we could 
+  # do checks on those SDKs that still use the depreciated 
+  # implicit-casts for example in strong mode. 
+  # note strong mode is default by design for Dart 2.0 and up so 
+  # no point of having a separate strong mode block if you are
+  # using updated SDKs including the beta channels
   language: 
     strict-raw-types: true
-  strong-mode: 
-    implicit-dynamic: false
-    implicit-casts: false
+    strict-inference: true
+    strict-casts: true
   errors: 
     missing_required_param: warning
     missing_return: warning
