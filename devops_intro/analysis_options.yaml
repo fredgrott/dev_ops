@@ -103,6 +103,7 @@ dart_code_metrics:
     - no-empty-block
     - no-object-declaration
     - prefer-conditional-expressions
+    - prefer-commenting-analyzer-ignores
     - prefer-correct-identifier-length:
         exceptions: [ 'z' ]
         max-identifier-length: 30
